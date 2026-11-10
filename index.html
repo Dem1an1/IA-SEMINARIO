@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>¿Real o IA? · ¿Podés distinguirlo?</title>
+  <meta name="description" content="¿Podés distinguir lo real de lo generado por inteligencia artificial? Jugá, entrená tu ojo crítico y compartí tu resultado.">
+  <meta name="theme-color" content="#3b3fc9">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Vista previa al compartir el link (Instagram, WhatsApp, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="¿Real o IA?">
+  <meta property="og:description" content="¿Podés distinguir lo real de lo generado por inteligencia artificial? Probá con 10 imágenes.">
+  <meta property="og:locale" content="es_AR">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Fondo vibrante con blobs: le da al vidrio algo para refractar -->
+  <div class="fondo" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <main id="app">
+    <!-- ========== 1. INICIO ========== -->
+    <section id="pantalla-inicio" class="pantalla pantalla-centrada" aria-labelledby="titulo-inicio">
+      <div class="glass tarjeta hero">
+        <span class="etiqueta glass">Juego · Beta</span>
+        <h1 id="titulo-inicio" tabindex="-1">¿Real o IA?</h1>
+        <p class="subtitulo">¿Podés distinguir lo real de lo generado por inteligencia artificial?</p>
+        <button id="btn-empezar" class="btn btn-primario glass" type="button">Empezar</button>
+        <p class="nota-inicio">10 imágenes · menos de 3 minutos</p>
+      </div>
+      <p class="pie">Trabajo práctico · Seminario de IA · FPyCS-UNLP · 2026</p>
+    </section>
+
+    <!-- ========== 2. RONDA ========== -->
+    <section id="pantalla-ronda" class="pantalla pantalla-ronda" aria-labelledby="titulo-ronda" hidden>
+      <h2 id="titulo-ronda" class="sr-only" tabindex="-1">Ronda 1 de 10</h2>
+
+      <header class="progreso glass">
+        <span id="progreso-texto" class="progreso-texto" aria-hidden="true">1 / 10</span>
+        <div id="progreso-barra" class="barra" role="progressbar" aria-label="Progreso de la partida" aria-valuemin="0" aria-valuemax="10" aria-valuenow="1">
+          <span id="progreso-relleno" class="barra-relleno"></span>
+        </div>
+        <span id="puntaje-parcial" class="puntaje-parcial" aria-label="Aciertos hasta ahora">✓ 0</span>
+      </header>
+
+      <figure id="media" class="media glass">
+        <div id="media-fondo" class="media-fondo" aria-hidden="true"></div>
+        <img id="ronda-imagen" class="media-img" alt="" decoding="async">
+        <div id="placeholder" class="placeholder glass" role="img" aria-label="" hidden>
+          <svg class="placeholder-icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <rect x="3" y="4" width="18" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="9" cy="10" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M4 18l5-5 4 4 3-3 4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+          <span id="placeholder-texto" class="placeholder-texto">Imagen de la ronda 1</span>
+          <span id="placeholder-ruta" class="placeholder-ruta"></span>
+        </div>
+        <figcaption id="ronda-credito" class="credito" hidden></figcaption>
+      </figure>
+
+      <div id="acciones" class="acciones">
+        <p class="pregunta">¿Es una foto real o la generó una IA?</p>
+        <div class="botones-respuesta">
+          <button class="btn btn-grande glass" type="button" data-respuesta="real">
+            <span aria-hidden="true">📷</span> Real <kbd class="atajo" aria-hidden="true">R</kbd>
+          </button>
+          <button class="btn btn-grande glass" type="button" data-respuesta="ia">
+            <span aria-hidden="true">✨</span> IA <kbd class="atajo" aria-hidden="true">I</kbd>
+          </button>
+        </div>
+      </div>
+
+      <div id="resultado" class="resultado glass tarjeta" hidden>
+        <p class="resultado-estado">
+          <span id="resultado-icono" class="resultado-icono" aria-hidden="true"></span>
+          <strong id="resultado-titulo"></strong>
+        </p>
+        <p id="resultado-respuesta" class="resultado-respuesta"></p>
+        <p id="resultado-explicacion" class="resultado-explicacion"></p>
+        <button id="btn-siguiente" class="btn btn-primario glass" type="button">Siguiente</button>
+      </div>
+    </section>
+
+    <!-- ========== 3. FINAL ========== -->
+    <section id="pantalla-final" class="pantalla pantalla-centrada" aria-labelledby="final-mensaje" hidden>
+      <div class="glass tarjeta final">
+        <p class="sobretitulo">Tu resultado</p>
+        <p class="puntaje" aria-live="off">
+          <span id="final-puntaje" class="puntaje-numero">0</span>
+          <span class="puntaje-de">de <span id="final-total">10</span></span>
+        </p>
+        <h2 id="final-mensaje" class="final-mensaje" tabindex="-1"></h2>
+        <p class="final-texto">
+          Cada vez es más difícil distinguir una foto real de una imagen generada con IA, y las herramientas mejoran mes a mes.
+          Por eso la clave no es solo mirar con atención: es verificar las fuentes. Antes de creer o compartir, preguntate quién la publicó, dónde y cuándo.
+        </p>
+        <div class="botones-final">
+          <button id="btn-compartir" class="btn btn-primario glass" type="button">Compartir mi resultado</button>
+          <button id="btn-reiniciar" class="btn glass" type="button">Jugar de nuevo</button>
+          <button id="btn-como" class="btn btn-texto glass" type="button" aria-haspopup="dialog">Cómo se hizo este juego</button>
+        </div>
+      </div>
+      <p class="pie">Trabajo práctico · Seminario de IA · FPyCS-UNLP · 2026</p>
+    </section>
+  </main>
+
+  <!-- Panel de transparencia -->
+  <dialog id="panel-como" class="panel glass" aria-labelledby="titulo-como">
+    <h2 id="titulo-como">Cómo se hizo este juego</h2>
+    <p>
+      Este juego y sus imágenes generadas con IA se produjeron con herramientas de inteligencia artificial
+      como parte de un trabajo práctico del Seminario de IA de la Facultad de Periodismo y Comunicación Social (UNLP).
+    </p>
+    <p>
+      Las fotos reales son de autoría del grupo. Debajo de cada imagen, después de responder, vas a ver el crédito
+      con la herramienta usada o la indicación de que es una foto propia.
+    </p>
+    <p>
+      Lo hicimos para mostrar algo importante: si nosotros pudimos crear estas imágenes en pocos minutos,
+      cualquiera puede. Mirar con atención ayuda, pero verificar la fuente es lo que realmente te protege.
+    </p>
+    <button id="btn-cerrar-como" class="btn btn-primario glass" type="button">Entendido</button>
+  </dialog>
+
+  <!-- Avisos breves (ej. "¡Copiado!") -->
+  <div id="toast" class="toast glass" role="status" aria-live="polite" hidden></div>
+
+  <!-- Anuncios para lectores de pantalla -->
+  <div id="anuncio" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
+

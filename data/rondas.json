@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "imagen": "images/ronda-01.jpg",
+    "respuesta": "ia",
+    "explicacion": "Mirá las manos que sostienen el mate: la mano derecha tiene seis dedos y algunas falanges se deforman al agarrar la calabaza.",
+    "credito": "Generada con IA (Gemini)"
+  },
+  {
+    "id": 2,
+    "imagen": "images/ronda-02.jpg",
+    "respuesta": "real",
+    "explicacion": "Fijate en los carteles de la vidriera: cada palabra en inglés y cada número del horario se leen perfecto. La IA suele deformar las letras chicas.",
+    "credito": "Foto real sin copyright (Unsplash · CC0)"
+  },
+  {
+    "id": 3,
+    "imagen": "images/ronda-03.jpg",
+    "respuesta": "ia",
+    "explicacion": "La piel es demasiado lisa, casi sin poros, y cada aro es completamente distinto: uno es una argolla dorada y el otro un colgante plateado.",
+    "credito": "Generada con IA (Gemini)"
+  },
+  {
+    "id": 4,
+    "imagen": "images/ronda-04.jpg",
+    "respuesta": "real",
+    "explicacion": "Mirá el pelaje del perro y los pastos desenfocados adelante: hay pelos sueltos, bigotes irregulares y tierra real en el suelo. La IA suele alisar todo.",
+    "credito": "Foto real sin copyright (Unsplash · CC0)"
+  },
+  {
+    "id": 5,
+    "imagen": "images/ronda-05.jpg",
+    "respuesta": "ia",
+    "explicacion": "Las ventanas y los balcones no mantienen una alineación coherente entre pisos y varias rejas de hierro se tuercen. La IA falla seguido con la arquitectura.",
+    "credito": "Generada con IA (Gemini)"
+  },
+  {
+    "id": 6,
+    "imagen": "images/ronda-06.jpg",
+    "respuesta": "real",
+    "explicacion": "La calabaza del mate tiene marcas reales de desgaste, el cincelado de la virola es irregular y la yerba desparramada muestra palo, polvo y hojas todas distintas.",
+    "credito": "Foto real libre (Wikimedia Commons)"
+  },
+  {
+    "id": 7,
+    "imagen": "images/ronda-07.jpg",
+    "respuesta": "ia",
+    "explicacion": "Probá leer el cartel del kiosco y las hojas de precios: parecen palabras, pero son letras inventadas sin ningún sentido. Es una de las pistas más claras.",
+    "credito": "Generada con IA (Gemini)"
+  },
+  {
+    "id": 8,
+    "imagen": "images/ronda-08.jpg",
+    "respuesta": "real",
+    "explicacion": "Los gestos son espontáneos, las manos entrelazadas tienen anatomía normal y la trama del poncho mantiene su dibujo en los pliegues sin derretirse.",
+    "credito": "Foto real sin copyright (Unsplash · CC0)"
+  },
+  {
+    "id": 9,
+    "imagen": "images/ronda-09.jpg",
+    "respuesta": "ia",
+    "explicacion": "Fijate en el tenedor: tiene cinco dientes y el de la punta se tuerce raro. Además, el vapor del guiso dibuja rulos simétricos imposibles.",
+    "credito": "Generada con IA (Gemini)"
+  },
+  {
+    "id": 10,
+    "imagen": "images/ronda-10.jpg",
+    "respuesta": "real",
+    "explicacion": "En las zonas oscuras se nota el grano real del sensor de la cámara y la textura de las rocas volcánicas con nieve nunca repite el mismo patrón.",
+    "credito": "Foto real sin copyright (Unsplash · CC0)"
+  }
+]
