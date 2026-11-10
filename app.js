@@ -17,16 +17,16 @@
   // la carga del JSON (pasa al abrir index.html con doble clic, vía file://).
   // Si editás rondas.json y querés probarlo sin servidor, actualizá también esto.
   const RONDAS_RESPALDO = [
-    { id: 1, imagen: "images/ronda-01.jpg", respuesta: "ia", explicacion: "Mirá las manos: tienen dedos de más y los bordes se funden con el fondo.", credito: "Generada con Gemini" },
-    { id: 2, imagen: "images/ronda-02.jpg", respuesta: "real", explicacion: "Fijate en los carteles de la calle: el texto se lee perfecto y tiene sentido. La IA todavía suele inventar letras que no forman palabras.", credito: "Foto propia del grupo" },
-    { id: 3, imagen: "images/ronda-03.jpg", respuesta: "ia", explicacion: "La piel es demasiado lisa, sin poros ni marcas, y cada aro es distinto. Esa perfección de revista es una pista típica de la IA.", credito: "Generada con Midjourney" },
-    { id: 4, imagen: "images/ronda-04.jpg", respuesta: "real", explicacion: "La sombra del perro coincide con la dirección del sol y el pelaje tiene imperfecciones y mugre real. La luz coherente es difícil de falsificar.", credito: "Foto propia del grupo" },
-    { id: 5, imagen: "images/ronda-05.jpg", respuesta: "ia", explicacion: "Las ventanas de los edificios no se alinean y algunas líneas rectas se curvan o se derriten. La IA falla mucho con la geometría y la perspectiva.", credito: "Generada con DALL·E" },
-    { id: 6, imagen: "images/ronda-06.jpg", respuesta: "real", explicacion: "El mate tiene desgaste, la yerba está desparramada y los reflejos en la mesa coinciden con la ventana. Los objetos cotidianos con historia suelen delatar una foto real.", credito: "Foto propia del grupo" },
-    { id: 7, imagen: "images/ronda-07.jpg", respuesta: "ia", explicacion: "Probá leer el cartel: las letras parecen letras, pero no forman ninguna palabra. Es una de las pistas más fáciles de detectar.", credito: "Generada con Gemini" },
-    { id: 8, imagen: "images/ronda-08.jpg", respuesta: "real", explicacion: "Cada cara es distinta, los gestos son espontáneos y hay desorden natural en el fondo. En las imágenes de IA las caras del fondo suelen deformarse o repetirse.", credito: "Foto propia del grupo" },
-    { id: 9, imagen: "images/ronda-09.jpg", respuesta: "ia", explicacion: "La comida es demasiado perfecta y simétrica, con una luz de estudio que no viene de ningún lado. Mirá también el vapor: forma figuras raras que no siguen el aire.", credito: "Generada con Stable Diffusion" },
-    { id: 10, imagen: "images/ronda-10.jpg", respuesta: "real", explicacion: "En las zonas oscuras hay ruido digital granulado y el horizonte tiene detalles que no se repiten. La IA tiende a suavizar todo y a copiar patrones.", credito: "Foto propia del grupo" }
+    { id: 1, imagen: "images/ronda-01.jpg", respuesta: "ia", explicacion: "Mirá las manos que sostienen el mate: la mano derecha tiene seis dedos y algunas falanges se deforman al agarrar la calabaza.", credito: "Generada con IA (Gemini)" },
+    { id: 2, imagen: "images/ronda-02.jpg", respuesta: "real", explicacion: "Fijate en los carteles de la vidriera: cada palabra en inglés y cada número del horario se leen perfecto. La IA suele deformar las letras chicas.", credito: "Foto real sin copyright (Unsplash · CC0)" },
+    { id: 3, imagen: "images/ronda-03.jpg", respuesta: "ia", explicacion: "La piel es demasiado lisa, casi sin poros, y cada aro es completamente distinto: uno es una argolla dorada y el otro un colgante plateado.", credito: "Generada con IA (Gemini)" },
+    { id: 4, imagen: "images/ronda-04.jpg", respuesta: "real", explicacion: "Mirá el pelaje del perro y los pastos desenfocados adelante: hay pelos sueltos, bigotes irregulares y tierra real en el suelo. La IA suele alisar todo.", credito: "Foto real sin copyright (Unsplash · CC0)" },
+    { id: 5, imagen: "images/ronda-05.jpg", respuesta: "ia", explicacion: "Las ventanas y los balcones no mantienen una alineación coherente entre pisos y varias rejas de hierro se tuercen. La IA falla seguido con la arquitectura.", credito: "Generada con IA (Gemini)" },
+    { id: 6, imagen: "images/ronda-06.jpg", respuesta: "real", explicacion: "La calabaza del mate tiene marcas reales de desgaste, el cincelado de la virola es irregular y la yerba desparramada muestra palo, polvo y hojas todas distintas.", credito: "Foto real libre (Wikimedia Commons)" },
+    { id: 7, imagen: "images/ronda-07.jpg", respuesta: "ia", explicacion: "Probá leer el cartel del kiosco y las hojas de precios: parecen palabras, pero son letras inventadas sin ningún sentido. Es una de las pistas más claras.", credito: "Generada con IA (Gemini)" },
+    { id: 8, imagen: "images/ronda-08.jpg", respuesta: "real", explicacion: "Los gestos son espontáneos, las manos entrelazadas tienen anatomía normal y la trama del poncho mantiene su dibujo en los pliegues sin derretirse.", credito: "Foto real sin copyright (Unsplash · CC0)" },
+    { id: 9, imagen: "images/ronda-09.jpg", respuesta: "ia", explicacion: "Fijate en el tenedor: tiene cinco dientes y el de la punta se tuerce raro. Además, el vapor del guiso dibuja rulos simétricos imposibles.", credito: "Generada con IA (Gemini)" },
+    { id: 10, imagen: "images/ronda-10.jpg", respuesta: "real", explicacion: "En las zonas oscuras se nota el grano real del sensor de la cámara y la textura de las rocas volcánicas con nieve nunca repite el mismo patrón.", credito: "Foto real sin copyright (Unsplash · CC0)" }
   ];
 
   const MENSAJES_FINALES = [
@@ -65,15 +65,30 @@
     resultadoTitulo: $("resultado-titulo"),
     resultadoRespuesta: $("resultado-respuesta"),
     resultadoExplicacion: $("resultado-explicacion"),
+    resultadoStats: $("resultado-stats"),
+    statsBarraWrap: $("stats-barra-wrap"),
+    statsLabelReal: $("stats-label-real"),
+    statsLabelIa: $("stats-label-ia"),
+    statsRellenoReal: $("stats-relleno-real"),
+    statsRellenoIa: $("stats-relleno-ia"),
+    statsFrase: $("stats-frase"),
     btnSiguiente: $("btn-siguiente"),
     finalPuntaje: $("final-puntaje"),
     finalTotal: $("final-total"),
     finalMensaje: $("final-mensaje"),
+    finalPromedio: $("final-promedio"),
     btnCompartir: $("btn-compartir"),
     btnReiniciar: $("btn-reiniciar"),
+    btnDetectar: $("btn-detectar"),
     btnComo: $("btn-como"),
+    btnSobreInicio: $("btn-sobre-inicio"),
+    btnSobreFinal: $("btn-sobre-final"),
     panelComo: $("panel-como"),
     btnCerrarComo: $("btn-cerrar-como"),
+    panelDetectar: $("panel-detectar"),
+    btnCerrarDetectar: $("btn-cerrar-detectar"),
+    panelSobre: $("panel-sobre"),
+    btnCerrarSobre: $("btn-cerrar-sobre"),
     toast: $("toast"),
     anuncio: $("anuncio")
   };
@@ -83,12 +98,14 @@
   /* ---------- Estado ---------- */
 
   let todasLasRondas = [];
+  let ultimoBotonPanel = null;
   const estado = {
     rondas: [],
     indice: 0,
     aciertos: 0,
     respondida: false,
-    tokenImagen: 0
+    tokenImagen: 0,
+    stats: null
   };
 
   /* ---------- Utilidades ---------- */
@@ -162,6 +179,133 @@
     }
   }
 
+  /* ---------- Estadísticas colectivas (Supabase REST) ---------- */
+
+  function configSupabase() {
+    const url = (window.SUPABASE_URL || "").trim().replace(/\/+$/, "");
+    const key = (window.SUPABASE_ANON_KEY || "").trim();
+    return url && key ? { url, key } : null;
+  }
+
+  function headersSupabase(cfg, extra) {
+    return Object.assign({
+      "Content-Type": "application/json",
+      "apikey": cfg.key,
+      "Authorization": "Bearer " + cfg.key
+    }, extra);
+  }
+
+  async function cargarEstadisticas() {
+    const cfg = configSupabase();
+    if (!cfg) {
+      estado.stats = null;
+      return;
+    }
+    try {
+      const resp = await fetch(cfg.url + "/rest/v1/rpc/estadisticas", {
+        method: "POST",
+        headers: headersSupabase(cfg),
+        body: "{}"
+      });
+      if (!resp.ok) throw new Error("HTTP " + resp.status);
+      const data = await resp.json();
+      if (data && typeof data === "object") {
+        estado.stats = {
+          rondas: Array.isArray(data.rondas) ? data.rondas : [],
+          partidas: Number(data.partidas) || 0,
+          promedio: data.promedio !== null && data.promedio !== undefined ? Number(data.promedio) : null
+        };
+      }
+    } catch (_) {
+      // Silencioso: el juego sigue funcionando sin estadísticas
+      estado.stats = null;
+    }
+  }
+
+  function registrarVoto(rondaId, eleccion, acierto) {
+    const cfg = configSupabase();
+    if (!cfg) return;
+    fetch(cfg.url + "/rest/v1/votos", {
+      method: "POST",
+      headers: headersSupabase(cfg, { "Prefer": "return=minimal" }),
+      body: JSON.stringify({ ronda: rondaId, eleccion, acierto })
+    }).catch(() => {});
+  }
+
+  function mostrarEstadisticasRonda(ronda, eleccion, acerto) {
+    if (!configSupabase() || !estado.stats) {
+      ui.resultadoStats.hidden = true;
+      return;
+    }
+
+    let item = estado.stats.rondas.find((r) => Number(r.ronda) === Number(ronda.id));
+    if (!item) {
+      item = { ronda: ronda.id, real: 0, ia: 0, aciertos: 0, total: 0 };
+      estado.stats.rondas.push(item);
+    }
+
+    // Sumar el voto actual a los datos en memoria
+    item.total = (Number(item.total) || 0) + 1;
+    if (eleccion === "real") item.real = (Number(item.real) || 0) + 1;
+    else item.ia = (Number(item.ia) || 0) + 1;
+    if (acerto) item.aciertos = (Number(item.aciertos) || 0) + 1;
+
+    if (item.total < 5) {
+      ui.statsBarraWrap.hidden = true;
+      ui.statsFrase.textContent = "Todavía hay pocos votos en esta ronda";
+      ui.resultadoStats.hidden = false;
+      return;
+    }
+
+    const pctReal = Math.round((item.real / item.total) * 100);
+    const pctIa = 100 - pctReal;
+    const pctEleccion = eleccion === "real" ? pctReal : pctIa;
+    const pctAciertos = Math.round((item.aciertos / item.total) * 100);
+
+    ui.statsLabelReal.textContent = "Real " + pctReal + "%";
+    ui.statsLabelIa.textContent = "IA " + pctIa + "%";
+    ui.statsRellenoReal.style.width = pctReal + "%";
+    ui.statsRellenoIa.style.width = pctIa + "%";
+    ui.statsBarraWrap.hidden = false;
+
+    if (!acerto && pctAciertos <= 40) {
+      ui.statsFrase.textContent = "Solo el " + pctAciertos + "% acertó esta";
+    } else {
+      const etiquetaVoto = eleccion === "real" ? "Real" : "IA";
+      ui.statsFrase.textContent = "El " + pctEleccion + "% de las personas también dijo " + etiquetaVoto;
+    }
+
+    ui.resultadoStats.hidden = false;
+  }
+
+  function registrarPartida(puntaje) {
+    const cfg = configSupabase();
+    if (!cfg) return;
+    fetch(cfg.url + "/rest/v1/partidas", {
+      method: "POST",
+      headers: headersSupabase(cfg, { "Prefer": "return=minimal" }),
+      body: JSON.stringify({ puntaje })
+    }).catch(() => {});
+  }
+
+  function mostrarPromedioFinal(puntaje, total) {
+    if (!configSupabase() || !estado.stats) {
+      ui.finalPromedio.hidden = true;
+      return;
+    }
+    const prevPartidas = Number(estado.stats.partidas) || 0;
+    const prevProm = estado.stats.promedio !== null ? Number(estado.stats.promedio) : 0;
+    const nuevasPartidas = prevPartidas + 1;
+    const nuevoProm = Math.round(((prevProm * prevPartidas + puntaje) / nuevasPartidas) * 10) / 10;
+
+    estado.stats.partidas = nuevasPartidas;
+    estado.stats.promedio = nuevoProm;
+
+    const promTexto = Number.isInteger(nuevoProm) ? String(nuevoProm) : String(nuevoProm).replace(".", ",");
+    ui.finalPromedio.textContent = "El promedio de las " + nuevasPartidas + " personas que jugaron es " + promTexto + " de " + total;
+    ui.finalPromedio.hidden = false;
+  }
+
   /* ---------- Navegación entre pantallas ---------- */
 
   function mostrarPantalla(nombre, focoEn) {
@@ -182,6 +326,7 @@
     estado.rondas = mezclar(todasLasRondas);
     estado.indice = 0;
     estado.aciertos = 0;
+    cargarEstadisticas();
     ui.progresoBarra.setAttribute("aria-valuemax", String(estado.rondas.length));
     mostrarPantalla("ronda");
     mostrarRonda();
@@ -205,6 +350,7 @@
     // Reset de la interfaz de la ronda
     ui.resultado.hidden = true;
     ui.resultado.classList.remove("acierto", "error");
+    ui.resultadoStats.hidden = true;
     ui.media.classList.remove("acierto", "error");
     ui.acciones.hidden = false;
     ui.botonesRespuesta.forEach((b) => { b.disabled = false; });
@@ -301,6 +447,9 @@
     const esUltima = estado.indice === estado.rondas.length - 1;
     ui.btnSiguiente.textContent = esUltima ? "Ver mi resultado" : "Siguiente";
 
+    registrarVoto(ronda.id, eleccion, acerto);
+    mostrarEstadisticasRonda(ronda, eleccion, acerto);
+
     ui.resultado.hidden = false;
     anunciar(ui.resultadoTitulo.textContent + ". " + ui.resultadoRespuesta.textContent + " " + ronda.explicacion);
 
@@ -334,6 +483,8 @@
 
     ui.finalTotal.textContent = total;
     ui.finalMensaje.textContent = mensajeSegunPuntaje(puntaje, total);
+    registrarPartida(puntaje);
+    mostrarPromedioFinal(puntaje, total);
     mostrarPantalla("final", ui.finalMensaje);
     animarNumero(ui.finalPuntaje, puntaje);
     anunciar("Sacaste " + puntaje + " de " + total + ". " + ui.finalMensaje.textContent);
@@ -401,26 +552,60 @@
     }
   }
 
-  /* ---------- Panel "Cómo se hizo" ---------- */
+  /* ---------- Paneles (<dialog>) ---------- */
 
-  function abrirPanel() {
-    const panel = ui.panelComo;
+  function abrirPanel(panel, btnCerrar, disparador) {
+    ultimoBotonPanel = disparador || document.activeElement;
     if (typeof panel.showModal === "function") {
       panel.showModal();
     } else {
       panel.setAttribute("open", "");
     }
-    ui.btnCerrarComo.focus();
+    panel.scrollTop = 0;
+    if (btnCerrar) btnCerrar.focus();
   }
 
-  function cerrarPanel() {
-    const panel = ui.panelComo;
+  function cerrarPanel(panel) {
     if (typeof panel.close === "function") {
       panel.close();
     } else {
       panel.removeAttribute("open");
     }
-    ui.btnComo.focus();
+    if (ultimoBotonPanel && typeof ultimoBotonPanel.focus === "function") {
+      ultimoBotonPanel.focus();
+    }
+  }
+
+  function algunPanelAbierto() {
+    return Boolean(
+      (ui.panelComo && ui.panelComo.open) ||
+      (ui.panelDetectar && ui.panelDetectar.open) ||
+      (ui.panelSobre && ui.panelSobre.open)
+    );
+  }
+
+  function configurarDialogo(panel, btnCerrar, disparadores) {
+    if (!panel) return;
+    disparadores.forEach((btn) => {
+      if (btn) btn.addEventListener("click", () => abrirPanel(panel, btnCerrar, btn));
+    });
+    if (btnCerrar) {
+      btnCerrar.addEventListener("click", () => cerrarPanel(panel));
+    }
+    // Cerrar el panel tocando afuera (backdrop)
+    panel.addEventListener("click", (e) => {
+      if (e.target === panel) {
+        const r = panel.getBoundingClientRect();
+        const adentro = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+        if (!adentro) cerrarPanel(panel);
+      }
+    });
+    // Devolver el foco al cerrar con Escape
+    panel.addEventListener("close", () => {
+      if (ultimoBotonPanel && typeof ultimoBotonPanel.focus === "function") {
+        ultimoBotonPanel.focus();
+      }
+    });
   }
 
   /* ---------- Eventos ---------- */
@@ -435,22 +620,14 @@
     ui.btnSiguiente.addEventListener("click", siguiente);
     ui.btnReiniciar.addEventListener("click", empezarPartida);
     ui.btnCompartir.addEventListener("click", compartir);
-    ui.btnComo.addEventListener("click", abrirPanel);
-    ui.btnCerrarComo.addEventListener("click", cerrarPanel);
 
-    // Cerrar el panel tocando afuera
-    ui.panelComo.addEventListener("click", (e) => {
-      if (e.target === ui.panelComo) {
-        const r = ui.panelComo.getBoundingClientRect();
-        const adentro = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
-        if (!adentro) cerrarPanel();
-      }
-    });
-    ui.panelComo.addEventListener("close", () => ui.btnComo.focus());
+    configurarDialogo(ui.panelComo, ui.btnCerrarComo, [ui.btnComo]);
+    configurarDialogo(ui.panelDetectar, ui.btnCerrarDetectar, [ui.btnDetectar]);
+    configurarDialogo(ui.panelSobre, ui.btnCerrarSobre, [ui.btnSobreInicio, ui.btnSobreFinal]);
 
     // Atajos de teclado: R = Real, I = IA, N = Siguiente
     document.addEventListener("keydown", (e) => {
-      if (e.ctrlKey || e.metaKey || e.altKey || ui.panelComo.open) return;
+      if (e.ctrlKey || e.metaKey || e.altKey || algunPanelAbierto()) return;
       if (ui.pantallas.ronda.hidden) return;
       const tecla = e.key.toLowerCase();
       if (!estado.respondida) {

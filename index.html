@@ -35,7 +35,10 @@
         <button id="btn-empezar" class="btn btn-primario glass" type="button">Empezar</button>
         <p class="nota-inicio">10 imágenes · menos de 3 minutos</p>
       </div>
-      <p class="pie">Trabajo práctico · Seminario de IA · FPyCS-UNLP · 2026</p>
+      <footer class="pie-bloque">
+        <p class="pie">Trabajo práctico · Seminario de IA · FPyCS-UNLP · 2026</p>
+        <button id="btn-sobre-inicio" class="enlace-pie" type="button" aria-haspopup="dialog">Sobre el proyecto</button>
+      </footer>
     </section>
 
     <!-- ========== 2. RONDA ========== -->
@@ -84,6 +87,19 @@
         </p>
         <p id="resultado-respuesta" class="resultado-respuesta"></p>
         <p id="resultado-explicacion" class="resultado-explicacion"></p>
+        <div id="resultado-stats" class="stats-ronda" hidden>
+          <div id="stats-barra-wrap" class="stats-barra-wrap" hidden>
+            <div class="stats-etiquetas" aria-hidden="true">
+              <span id="stats-label-real">Real 50%</span>
+              <span id="stats-label-ia">IA 50%</span>
+            </div>
+            <div class="stats-barra glass" aria-hidden="true">
+              <span id="stats-relleno-real" class="stats-parte stats-real"></span>
+              <span id="stats-relleno-ia" class="stats-parte stats-ia"></span>
+            </div>
+          </div>
+          <p id="stats-frase" class="stats-frase"></p>
+        </div>
         <button id="btn-siguiente" class="btn btn-primario glass" type="button">Siguiente</button>
       </div>
     </section>
@@ -97,6 +113,7 @@
           <span class="puntaje-de">de <span id="final-total">10</span></span>
         </p>
         <h2 id="final-mensaje" class="final-mensaje" tabindex="-1"></h2>
+        <p id="final-promedio" class="final-promedio glass" hidden></p>
         <p class="final-texto">
           Cada vez es más difícil distinguir una foto real de una imagen generada con IA, y las herramientas mejoran mes a mes.
           Por eso la clave no es solo mirar con atención: es verificar las fuentes. Antes de creer o compartir, preguntate quién la publicó, dónde y cuándo.
@@ -104,10 +121,14 @@
         <div class="botones-final">
           <button id="btn-compartir" class="btn btn-primario glass" type="button">Compartir mi resultado</button>
           <button id="btn-reiniciar" class="btn glass" type="button">Jugar de nuevo</button>
+          <button id="btn-detectar" class="btn glass" type="button" aria-haspopup="dialog">Cómo detectar contenido de IA</button>
           <button id="btn-como" class="btn btn-texto glass" type="button" aria-haspopup="dialog">Cómo se hizo este juego</button>
         </div>
       </div>
-      <p class="pie">Trabajo práctico · Seminario de IA · FPyCS-UNLP · 2026</p>
+      <footer class="pie-bloque">
+        <p class="pie">Trabajo práctico · Seminario de IA · FPyCS-UNLP · 2026</p>
+        <button id="btn-sobre-final" class="enlace-pie" type="button" aria-haspopup="dialog">Sobre el proyecto</button>
+      </footer>
     </section>
   </main>
 
@@ -129,12 +150,103 @@
     <button id="btn-cerrar-como" class="btn btn-primario glass" type="button">Entendido</button>
   </dialog>
 
+  <!-- Panel: Guía "Cómo detectar contenido hecho con IA" -->
+  <dialog id="panel-detectar" class="panel glass" aria-labelledby="titulo-detectar">
+    <h2 id="titulo-detectar">Cómo detectar contenido hecho con IA</h2>
+
+    <h3>Pistas en la imagen (cada vez sirven menos):</h3>
+    <ul class="panel-lista">
+      <li>Manos y dedos: cantidad, forma, uniones raras.</li>
+      <li>Textos y carteles: letras inventadas o palabras sin sentido.</li>
+      <li>Simetrías imposibles: aros, ojos, ventanas o patrones que no coinciden.</li>
+      <li>Piel y superficies demasiado lisas, sin poros, grano ni desgaste.</li>
+      <li>Luces y sombras que no vienen de la misma fuente.</li>
+      <li>Fondos que se derriten o se mezclan con los objetos.</li>
+    </ul>
+
+    <h3>Lo que no caduca: verificar.</h3>
+    <ul class="panel-lista">
+      <li>¿Quién lo publicó? Buscá la fuente original y su historial.</li>
+      <li>Hacé una búsqueda inversa de la imagen (Google Lens o similares) para ver dónde apareció antes.</li>
+      <li>¿Algún medio confiable lo informó? Si es algo importante y nadie más lo dice, desconfiá.</li>
+      <li>Revisá si tiene credenciales de contenido o marcas de agua de IA: algunas herramientas las agregan, pero se pueden borrar.</li>
+      <li>Ojo con los detectores automáticos de IA: se equivocan seguido, en ambas direcciones.</li>
+    </ul>
+
+    <p class="panel-destacado glass">
+      Las pistas visuales cada vez sirven menos porque la IA mejora rápido. La habilidad que no caduca es preguntarse de dónde viene lo que vemos antes de creerlo o compartirlo.
+    </p>
+
+    <button id="btn-cerrar-detectar" class="btn btn-primario glass" type="button">Entendido</button>
+  </dialog>
+
+  <!-- Panel: "Sobre el proyecto" -->
+  <dialog id="panel-sobre" class="panel glass" aria-labelledby="titulo-sobre">
+    <h2 id="titulo-sobre">Sobre el proyecto</h2>
+
+    <h3>¿Qué es esto?</h3>
+    <p>
+      "¿Real o IA?" es parte de un producto transmedia hecho como trabajo práctico final del Seminario de Formación en usos, reflexiones y aplicaciones de la IA en el campo de la comunicación (Facultad de Periodismo y Comunicación Social, UNLP, 2026). El proyecto tiene tres piezas: un reel que cuenta una historia y revela que fue hecha con IA, este juego, y las historias de Instagram donde compartimos qué tanto acertó la gente.
+    </p>
+
+    <h3>En qué nos basamos: Henry Jenkins</h3>
+    <p>
+      Henry Jenkins es un investigador estadounidense de medios y cultura, profesor en la Universidad del Sur de California (USC) y antes en el MIT. Sus ideas nos sirvieron para pensar un problema nuevo: ¿cómo distinguimos lo real de lo generado por inteligencia artificial?
+    </p>
+
+    <h3>Cultura de la convergencia</h3>
+    <p>
+      Jenkins describe una cultura donde los contenidos circulan entre plataformas y donde el público ya no solo recibe, sino que también produce y comparte. La IA generativa suma un actor más a esa circulación: ahora las máquinas también producen imágenes, textos y voces que conviven con lo que hacen las personas, muchas veces sin que se note la diferencia.
+    </p>
+
+    <h3>Alfabetizaciones mediáticas</h3>
+    <p>
+      Para Jenkins, participar en esta cultura exige nuevas habilidades, entre ellas el juicio para evaluar si una información es confiable. Frente a la IA, esa habilidad cambia de forma: ya no alcanza con detectar errores visibles, porque cada vez hay menos. Lo que sigue siendo válido es preguntarse de dónde viene lo que vemos.
+    </p>
+
+    <h3>Medios propagables</h3>
+    <p>
+      Jenkins sostiene que los contenidos circulan porque las personas deciden compartirlos, por emoción, identidad o humor. Eso explica por qué una imagen generada con IA puede recorrer las redes sin que nadie la verifique: se comparte por lo que provoca, no por si es verdadera.
+    </p>
+
+    <h3>Inteligencia colectiva</h3>
+    <p>
+      Retomando a Pierre Lévy, Jenkins plantea que una comunidad sabe más que cada uno de sus miembros por separado. Distinguir lo real de lo artificial deja de ser una tarea individual y pasa a ser una construcción colectiva.
+    </p>
+
+    <h3>Por qué un relato transmedia</h3>
+    <p>
+      Jenkins define la narrativa transmedia como un relato que se reparte entre plataformas, donde cada una aporta algo distinto y el público completa el recorrido. Elegimos ese formato porque el problema de la IA tampoco ocurre en un solo lugar: aparece en el video que nos emociona, en la imagen que creemos real y en la conversación donde descubrimos que nos engañaron. Cada pieza del proyecto toma uno de esos momentos.
+    </p>
+    <p>
+      Jenkins escribió estas ideas antes de la IA generativa. Nos preguntamos si alcanzan cuando ya no es posible ver la diferencia a simple vista.
+    </p>
+
+    <h3>Referencias (APA 7):</h3>
+    <ul class="panel-lista panel-referencias">
+      <li>Jenkins, H. (2006). <em>Convergence culture: Where old and new media collide</em>. New York University Press.</li>
+      <li>Jenkins, H. (2009). <em>Confronting the challenges of participatory culture: Media education for the 21st century</em>. MIT Press.</li>
+      <li>Jenkins, H., Ford, S. y Green, J. (2013). <em>Spreadable media: Creating value and meaning in a networked culture</em>. New York University Press.</li>
+    </ul>
+
+    <p class="panel-destacado glass">
+      <strong>Transparencia:</strong> el juego, el reel y las imágenes marcadas como IA se produjeron con herramientas de inteligencia artificial. Las decisiones, la selección y la revisión de los contenidos son nuestras.
+    </p>
+
+    <p class="panel-grupo">
+      <strong>Grupo:</strong> Demian Aivar, Lucas Paganti, Lourdes Woollands
+    </p>
+
+    <button id="btn-cerrar-sobre" class="btn btn-primario glass" type="button">Entendido</button>
+  </dialog>
+
   <!-- Avisos breves (ej. "¡Copiado!") -->
   <div id="toast" class="toast glass" role="status" aria-live="polite" hidden></div>
 
   <!-- Anuncios para lectores de pantalla -->
   <div id="anuncio" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 
+  <script src="config.js" defer></script>
   <script src="app.js" defer></script>
 </body>
 </html>

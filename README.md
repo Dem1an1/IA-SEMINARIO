@@ -6,9 +6,11 @@ Trabajo práctico · Seminario de IA · FPyCS-UNLP · 2026.
 Hecho con HTML, CSS y JavaScript puros: no necesita instalar nada ni compilar.
 
 ```
-/index.html        → estructura de las pantallas
+/index.html        → estructura de las pantallas y paneles
 /styles.css        → estilo "Liquid Glass"
-/app.js            → lógica del juego
+/config.js         → URL y clave pública de Supabase (opcional)
+/app.js            → lógica del juego y conexión REST con Supabase
+/supabase.sql      → tablas, políticas y función RPC para pegar en Supabase
 /data/rondas.json  → las 10 rondas (imagen, respuesta, explicación, crédito)
 /images/           → acá van las imágenes
 ```
@@ -97,6 +99,30 @@ Abrí `app.js` y poné la URL definitiva en la primera constante, para que el bo
 ```js
 const URL_JUEGO = "https://real-o-ia.vercel.app";
 ```
+
+---
+
+## 5. Cómo activar las estadísticas colectivas con Supabase (opcional)
+
+Si dejás `config.js` vacío, el juego funciona completo sin estadísticas ni errores. Para activar el porcentaje de respuestas por ronda y el promedio general:
+
+1. **Crear un proyecto gratis en Supabase:**
+   - Entrá a https://supabase.com, iniciá sesión y tocá **New project**.
+   - Elegí un nombre (por ejemplo `real-o-ia`), poné una contraseña para la base de datos y elegí la región más cercana (por ejemplo *South America - São Paulo*).
+2. **Crear las tablas y la función SQL:**
+   - En el menú izquierdo de Supabase, entrá a **SQL Editor** → **New query**.
+   - Copiá todo el contenido del archivo `supabase.sql` de este proyecto, pegalo ahí y tocá **Run**.
+3. **Copiar las credenciales en `config.js`:**
+   - En Supabase, andá a **Project Settings** (el ícono de engranaje abajo a la izquierda) → **API**.
+   - Copiá **Project URL** y la clave **anon / public** (en *Project API keys*).
+   - Abrí `config.js` y pegá ambos valores:
+
+```js
+window.SUPABASE_URL = "https://tu-proyecto.supabase.co";
+window.SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...";
+```
+
+4. Guardá y subí el cambio (si usás GitHub + Vercel/Netlify, hacé commit y push).
 
 ---
 
