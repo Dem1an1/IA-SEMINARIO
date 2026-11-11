@@ -30,3 +30,4 @@ language sql security definer set search_path = public as $$
   );
 $$;
 grant execute on function estadisticas() to anon;
+

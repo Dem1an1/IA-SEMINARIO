@@ -11,7 +11,7 @@
   <!-- Vista previa al compartir el link (Instagram, WhatsApp, etc.) -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="¿Real o IA?">
-  <meta property="og:description" content="¿Podés distinguir lo real de lo generado por inteligencia artificial? Probá con 10 imágenes.">
+  <meta property="og:description" content="¿Podés distinguir lo real de lo generado por inteligencia artificial? Poné a prueba tu ojo con 100 imágenes.">
   <meta property="og:locale" content="es_AR">
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>">
@@ -33,7 +33,7 @@
         <h1 id="titulo-inicio" tabindex="-1">¿Real o IA?</h1>
         <p class="subtitulo">¿Podés distinguir lo real de lo generado por inteligencia artificial?</p>
         <button id="btn-empezar" class="btn btn-primario glass" type="button">Empezar</button>
-        <p class="nota-inicio">10 imágenes · menos de 3 minutos</p>
+        <p class="nota-inicio">100 imágenes · 50 reales y 50 hechas con IA</p>
       </div>
       <footer class="pie-bloque">
         <p class="pie">Trabajo práctico · Seminario de IA · FPyCS-UNLP · 2026</p>
@@ -43,11 +43,11 @@
 
     <!-- ========== 2. RONDA ========== -->
     <section id="pantalla-ronda" class="pantalla pantalla-ronda" aria-labelledby="titulo-ronda" hidden>
-      <h2 id="titulo-ronda" class="sr-only" tabindex="-1">Ronda 1 de 10</h2>
+      <h2 id="titulo-ronda" class="sr-only" tabindex="-1">Ronda 1 de 100</h2>
 
       <header class="progreso glass">
-        <span id="progreso-texto" class="progreso-texto" aria-hidden="true">1 / 10</span>
-        <div id="progreso-barra" class="barra" role="progressbar" aria-label="Progreso de la partida" aria-valuemin="0" aria-valuemax="10" aria-valuenow="1">
+        <span id="progreso-texto" class="progreso-texto" aria-hidden="true">1 / 100</span>
+        <div id="progreso-barra" class="barra" role="progressbar" aria-label="Progreso de la partida" aria-valuemin="0" aria-valuemax="100" aria-valuenow="1">
           <span id="progreso-relleno" class="barra-relleno"></span>
         </div>
         <span id="puntaje-parcial" class="puntaje-parcial" aria-label="Aciertos hasta ahora">✓ 0</span>
@@ -101,6 +101,7 @@
           <p id="stats-frase" class="stats-frase"></p>
         </div>
         <button id="btn-siguiente" class="btn btn-primario glass" type="button">Siguiente</button>
+        <button id="btn-terminar" class="enlace-pie" type="button">Terminar partida y ver resultado</button>
       </div>
     </section>
 
@@ -110,7 +111,7 @@
         <p class="sobretitulo">Tu resultado</p>
         <p class="puntaje" aria-live="off">
           <span id="final-puntaje" class="puntaje-numero">0</span>
-          <span class="puntaje-de">de <span id="final-total">10</span></span>
+          <span class="puntaje-de">de <span id="final-total">100</span></span>
         </p>
         <h2 id="final-mensaje" class="final-mensaje" tabindex="-1"></h2>
         <p id="final-promedio" class="final-promedio glass" hidden></p>
@@ -140,8 +141,8 @@
       como parte de un trabajo práctico del Seminario de IA de la Facultad de Periodismo y Comunicación Social (UNLP).
     </p>
     <p>
-      Las fotos reales son de autoría del grupo. Debajo de cada imagen, después de responder, vas a ver el crédito
-      con la herramienta usada o la indicación de que es una foto propia.
+      El banco cuenta con 100 imágenes (50 fotografías reales libres de derechos y 50 generadas con distintos modelos de IA).
+      Debajo de cada imagen, después de responder, vas a ver el crédito correspondiente.
     </p>
     <p>
       Lo hicimos para mostrar algo importante: si nosotros pudimos crear estas imágenes en pocos minutos,

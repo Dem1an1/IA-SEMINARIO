@@ -11,15 +11,15 @@ Hecho con HTML, CSS y JavaScript puros: no necesita instalar nada ni compilar.
 /config.js         → URL y clave pública de Supabase (opcional)
 /app.js            → lógica del juego y conexión REST con Supabase
 /supabase.sql      → tablas, políticas y función RPC para pegar en Supabase
-/data/rondas.json  → las 10 rondas (imagen, respuesta, explicación, crédito)
-/images/           → acá van las imágenes
+/data/rondas.json  → las 100 rondas (imagen, respuesta, explicación, crédito)
+/images/           → las 100 imágenes (50 reales y 50 generadas con IA)
 ```
 
 ---
 
 ## 1. Cómo reemplazar las imágenes
 
-1. Poné tus imágenes en la carpeta `images/` con estos nombres: `ronda-01.jpg`, `ronda-02.jpg` … `ronda-10.jpg`.
+1. Poné tus imágenes en la carpeta `images/` con estos nombres: `ronda-01.jpg`, `ronda-02.jpg` … `ronda-100.jpg`.
    - Formato recomendado: JPG o WebP, vertical (4:5 o 3:4), de unos 1080 px de ancho y menos de 400 KB cada una para que cargue rápido en el celular.
    - Si usás otro nombre o extensión (por ejemplo `.png`), cambiá la ruta en `rondas.json`.
 2. Mientras una imagen no exista, el juego muestra un recuadro de vidrio que dice "Imagen de la ronda N". No se rompe nada.

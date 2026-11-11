@@ -670,6 +670,7 @@ h1:focus, h2:focus,
 }
 
 .resultado .btn { width: 100%; }
+.resultado .enlace-pie { align-self: center; }
 
 /* ---------- Final ---------- */
 .final {
