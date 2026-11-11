@@ -33,7 +33,7 @@
         <h1 id="titulo-inicio" tabindex="-1">¿Real o IA?</h1>
         <p class="subtitulo">¿Podés distinguir lo real de lo generado por inteligencia artificial?</p>
         <button id="btn-empezar" class="btn btn-primario glass" type="button">Empezar</button>
-        <p class="nota-inicio">100 imágenes · 50 reales y 50 hechas con IA</p>
+        <p class="nota-inicio">10 imágenes al azar entre 100 fotos · menos de 3 minutos</p>
       </div>
       <footer class="pie-bloque">
         <p class="pie">Trabajo práctico · Seminario de IA · FPyCS-UNLP · 2026</p>
@@ -43,11 +43,11 @@
 
     <!-- ========== 2. RONDA ========== -->
     <section id="pantalla-ronda" class="pantalla pantalla-ronda" aria-labelledby="titulo-ronda" hidden>
-      <h2 id="titulo-ronda" class="sr-only" tabindex="-1">Ronda 1 de 100</h2>
+      <h2 id="titulo-ronda" class="sr-only" tabindex="-1">Ronda 1 de 10</h2>
 
       <header class="progreso glass">
-        <span id="progreso-texto" class="progreso-texto" aria-hidden="true">1 / 100</span>
-        <div id="progreso-barra" class="barra" role="progressbar" aria-label="Progreso de la partida" aria-valuemin="0" aria-valuemax="100" aria-valuenow="1">
+        <span id="progreso-texto" class="progreso-texto" aria-hidden="true">1 / 10</span>
+        <div id="progreso-barra" class="barra" role="progressbar" aria-label="Progreso de la partida" aria-valuemin="0" aria-valuemax="10" aria-valuenow="1">
           <span id="progreso-relleno" class="barra-relleno"></span>
         </div>
         <span id="puntaje-parcial" class="puntaje-parcial" aria-label="Aciertos hasta ahora">✓ 0</span>
@@ -101,7 +101,6 @@
           <p id="stats-frase" class="stats-frase"></p>
         </div>
         <button id="btn-siguiente" class="btn btn-primario glass" type="button">Siguiente</button>
-        <button id="btn-terminar" class="enlace-pie" type="button">Terminar partida y ver resultado</button>
       </div>
     </section>
 
@@ -111,7 +110,7 @@
         <p class="sobretitulo">Tu resultado</p>
         <p class="puntaje" aria-live="off">
           <span id="final-puntaje" class="puntaje-numero">0</span>
-          <span class="puntaje-de">de <span id="final-total">100</span></span>
+          <span class="puntaje-de">de <span id="final-total">10</span></span>
         </p>
         <h2 id="final-mensaje" class="final-mensaje" tabindex="-1"></h2>
         <p id="final-promedio" class="final-promedio glass" hidden></p>

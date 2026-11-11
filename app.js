@@ -12,6 +12,8 @@
   const URL_JUEGO = "";
 
   const RUTA_RONDAS = "data/rondas.json";
+  const RONDAS_POR_PARTIDA = 10;
+  const CLAVE_VISTAS = "real_o_ia_vistas";
 
   // Copia de respaldo de data/rondas.json. Se usa SOLO si el navegador bloquea
   // la carga del JSON (pasa al abrir index.html con doble clic, vía file://).
@@ -163,7 +165,6 @@
     statsRellenoIa: $("stats-relleno-ia"),
     statsFrase: $("stats-frase"),
     btnSiguiente: $("btn-siguiente"),
-    btnTerminar: $("btn-terminar"),
     finalPuntaje: $("final-puntaje"),
     finalTotal: $("final-total"),
     finalMensaje: $("final-mensaje"),
@@ -189,12 +190,12 @@
   /* ---------- Estado ---------- */
 
   let todasLasRondas = [];
+  let vistasEnMemoria = new Set();
   let ultimoBotonPanel = null;
   const estado = {
     rondas: [],
     indice: 0,
     aciertos: 0,
-    respondidas: 0,
     respondida: false,
     tokenImagen: 0,
     stats: null
@@ -210,6 +211,39 @@
       [copia[i], copia[j]] = [copia[j], copia[i]];
     }
     return copia;
+  }
+
+  function cargarVistasGuardadas() {
+    try {
+      const raw = sessionStorage.getItem(CLAVE_VISTAS);
+      const lista = raw ? JSON.parse(raw) : [];
+      if (Array.isArray(lista)) {
+        lista.forEach((id) => vistasEnMemoria.add(Number(id)));
+      }
+    } catch (_) { /* sin soporte */ }
+  }
+
+  function guardarVistas() {
+    try {
+      sessionStorage.setItem(CLAVE_VISTAS, JSON.stringify(Array.from(vistasEnMemoria)));
+    } catch (_) { /* sin soporte */ }
+  }
+
+  // Elige 10 imágenes al azar que no hayan salido en partidas anteriores;
+  // cuando se agotan las 100 imágenes del banco, reinicia el mazo.
+  function seleccionarRondasPartida() {
+    const cantidad = Math.min(RONDAS_POR_PARTIDA, todasLasRondas.length);
+    let disponibles = todasLasRondas.filter((r) => !vistasEnMemoria.has(Number(r.id)));
+
+    if (disponibles.length < cantidad) {
+      vistasEnMemoria.clear();
+      disponibles = todasLasRondas.slice();
+    }
+
+    const elegidas = mezclar(disponibles).slice(0, cantidad);
+    elegidas.forEach((r) => vistasEnMemoria.add(Number(r.id)));
+    guardarVistas();
+    return elegidas;
   }
 
   function normalizar(rondas) {
@@ -415,10 +449,9 @@
   /* ---------- Partida ---------- */
 
   function empezarPartida() {
-    estado.rondas = mezclar(todasLasRondas);
+    estado.rondas = seleccionarRondasPartida();
     estado.indice = 0;
     estado.aciertos = 0;
-    estado.respondidas = 0;
     cargarEstadisticas();
     ui.progresoBarra.setAttribute("aria-valuemax", String(estado.rondas.length));
     mostrarPantalla("ronda");
@@ -512,7 +545,6 @@
   function responder(eleccion) {
     if (estado.respondida || ui.pantallas.ronda.hidden) return;
     estado.respondida = true;
-    estado.respondidas++;
 
     const ronda = estado.rondas[estado.indice];
     const acerto = eleccion === ronda.respuesta;
@@ -540,7 +572,6 @@
 
     const esUltima = estado.indice === estado.rondas.length - 1;
     ui.btnSiguiente.textContent = esUltima ? "Ver mi resultado" : "Siguiente";
-    if (ui.btnTerminar) ui.btnTerminar.hidden = esUltima;
 
     registrarVoto(ronda.id, eleccion, acerto);
     mostrarEstadisticasRonda(ronda, eleccion, acerto);
@@ -573,7 +604,7 @@
   }
 
   function mostrarFinal() {
-    const total = estado.respondidas || estado.rondas.length;
+    const total = estado.rondas.length;
     const puntaje = estado.aciertos;
     const puntajeBase10 = total === 10 ? puntaje : Math.round((puntaje / total) * 10);
 
@@ -606,7 +637,7 @@
   /* ---------- Compartir ---------- */
 
   async function compartir() {
-    const total = estado.respondidas || estado.rondas.length;
+    const total = estado.rondas.length;
     const url = urlParaCompartir();
     const texto = "Saqué " + estado.aciertos + "/" + total + " en ¿Real o IA? ¿Vos cuánto sacás?";
 
@@ -714,11 +745,6 @@
     });
 
     ui.btnSiguiente.addEventListener("click", siguiente);
-    if (ui.btnTerminar) {
-      ui.btnTerminar.addEventListener("click", () => {
-        if (estado.respondidas > 0) mostrarFinal();
-      });
-    }
     ui.btnReiniciar.addEventListener("click", empezarPartida);
     ui.btnCompartir.addEventListener("click", compartir);
 
@@ -752,8 +778,9 @@
       window.addEventListener("resize", ajustarImagen);
     }
     ui.btnEmpezar.disabled = true;
+    cargarVistasGuardadas();
     todasLasRondas = await cargarRondas();
-    ui.finalTotal.textContent = todasLasRondas.length;
+    ui.finalTotal.textContent = Math.min(RONDAS_POR_PARTIDA, todasLasRondas.length);
     ui.btnEmpezar.disabled = false;
     ui.pantallas.inicio.classList.add("entrar");
   }
