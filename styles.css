@@ -283,7 +283,7 @@ button { font: inherit; color: inherit; }
   width: 100%;
   max-width: 560px;
   margin: 0 auto;
-  padding: calc(16px + var(--safe-top)) 16px calc(16px + var(--safe-bottom));
+  padding: calc(16px + var(--safe-top)) 16px calc(76px + env(safe-area-inset-bottom, 0px));
 }
 
 .pantalla-centrada {
@@ -398,6 +398,7 @@ h1:focus, h2:focus,
   display: flex;
   flex-direction: column;
   gap: 14px;
+  padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px));
 }
 
 .progreso {
@@ -833,7 +834,7 @@ h1:focus, h2:focus,
 .toast {
   position: fixed;
   left: 50%;
-  bottom: calc(24px + var(--safe-bottom));
+  bottom: calc(80px + env(safe-area-inset-bottom, 0px));
   transform: translateX(-50%);
   max-width: calc(100vw - 32px);
   padding: 12px 20px;
