@@ -227,8 +227,8 @@
     "id": 33,
     "imagen": "images/ronda-33.jpg",
     "respuesta": "ia",
-    "explicacion": "La piel tiene un brillo de porcelana sin poros reales y los pliegues de la ropa se esfuman sin costuras definidas.",
-    "credito": "Generada con IA (Midjourney)"
+    "explicacion": "Fijate en los tres autos antiguos estacionados frente al hotel: las ruedas y las carrocerías se deforman y las arcadas de piedra no mantienen el mismo tamaño.",
+    "credito": "Generada con IA"
   },
   {
     "id": 34,
@@ -241,7 +241,7 @@
     "id": 35,
     "imagen": "images/ronda-35.jpg",
     "respuesta": "ia",
-    "explicacion": "Las personas alrededor del supuesto esqueleto gigante tienen posturas y caras deformadas, y las escaleras se clavan en la tierra sin estructura real.",
+    "explicacion": "Mirá los colectivos rojos y la gente alrededor del Arco de Triunfo: las siluetas son manchas sin piernas definidas y los relieves de piedra están derretidos.",
     "credito": "Generada con IA (Midjourney)"
   },
   {
@@ -269,8 +269,8 @@
     "id": 39,
     "imagen": "images/ronda-39.jpg",
     "respuesta": "ia",
-    "explicacion": "La simetría del rostro es casi matemática, el brillo de los ojos parece dibujado y la textura de la piel es demasiado uniforme.",
-    "credito": "Generada con IA (Midjourney)"
+    "explicacion": "La iluminación de estudio es impecable, pero fijate en los ojales de la camisa negra y en la simetría de las orejas: los bordes tienen un suavizado sintético.",
+    "credito": "Generada con IA"
   },
   {
     "id": 40,
@@ -283,8 +283,8 @@
     "id": 41,
     "imagen": "images/ronda-41.jpg",
     "respuesta": "ia",
-    "explicacion": "Fijate en las ventanas de la mansión: las molduras cambian de tamaño entre un lado y otro y las tejas del techo se mezclan en una textura borrosa.",
-    "credito": "Generada con IA (DALL·E)"
+    "explicacion": "Mirá el instrumental odontológico desenfocado atrás a la izquierda: son varillas metálicas que se doblan sin formar herramientas reales, y la piel no tiene poros.",
+    "credito": "Generada con IA"
   },
   {
     "id": 42,
@@ -297,7 +297,7 @@
     "id": 43,
     "imagen": "images/ronda-43.jpg",
     "respuesta": "ia",
-    "explicacion": "El contorno del caminante contra las montañas tiene bordes raros y las crestas de roca repiten trazos como si fueran pinceladas.",
+    "explicacion": "Mirá los pelos de la barba canosa y las arrugas alrededor de los ojos: tienen una textura demasiado pareja y el bosque del fondo repite formas idénticas.",
     "credito": "Generada con IA (Stable Diffusion)"
   },
   {
@@ -395,7 +395,7 @@
     "id": 57,
     "imagen": "images/ronda-57.jpg",
     "respuesta": "ia",
-    "explicacion": "Aunque parece una foto de catálogo de un puerro, las raíces son hilos borrosos que se desvanecen y las hojas verdes se pliegan de forma antinatural.",
+    "explicacion": "Aunque las arrugas y la barba parecen muy reales, fijate en el cuello de la chomba roja: de un lado desaparece la costura y el botón queda suelto sin ojal.",
     "credito": "Generada con IA"
   },
   {
@@ -423,8 +423,8 @@
     "id": 61,
     "imagen": "images/ronda-61.jpg",
     "respuesta": "ia",
-    "explicacion": "Fijate en los carteles de las tres cajas y en el perro: aunque el rostro es muy realista, los bordes de las letras y la perspectiva de las cajas delatan la generación.",
-    "credito": "Generada con IA (Flux.1)"
+    "explicacion": "Mirá el camafeo del collar y los libros de la biblioteca atrás: el dibujo del broche se deforma y los lomos de los libros se funden entre sí sin títulos.",
+    "credito": "Generada con IA"
   },
   {
     "id": 62,
@@ -451,8 +451,8 @@
     "id": 65,
     "imagen": "images/ronda-65.jpg",
     "respuesta": "ia",
-    "explicacion": "Los estampados del sari se deforman en los pliegues, las letras de las cajas fallan y la anatomía del perro tiene proporciones raras.",
-    "credito": "Generada con IA (Stable Diffusion XL)"
+    "explicacion": "Las hojas de cilantro picadas parecen pegadas sobre la masa sin proyectar sombra real y el borde crocante se funde de forma borrosa con el plato.",
+    "credito": "Generada con IA"
   },
   {
     "id": 66,
@@ -479,8 +479,8 @@
     "id": 69,
     "imagen": "images/ronda-69.jpg",
     "respuesta": "ia",
-    "explicacion": "Fijate en el uniforme policial y los cuadros del museo al fondo: las insignias no tienen forma definida y los marcos de la pared están torcidos.",
-    "credito": "Generada con IA (Stable Diffusion)"
+    "explicacion": "Fijate en las burbujas de la sopa y los pliegues de los dumplings: la espuma forma una trama repetitiva y el borde del bol pierde su curva circular.",
+    "credito": "Generada con IA"
   },
   {
     "id": 70,
@@ -493,7 +493,7 @@
     "id": 71,
     "imagen": "images/ronda-71.jpg",
     "respuesta": "ia",
-    "explicacion": "Más allá de lo imposible de ver a Abraham Lincoln subiendo a un avión presidencial moderno, las ventanillas y las manos en la baranda están deformadas.",
+    "explicacion": "Mirá las ramitas de romero sobre la carne asada: varias hojas salen directamente de la corteza dorada sin tallo y los ajos se funden con las papas.",
     "credito": "Generada con IA"
   },
   {
@@ -507,7 +507,7 @@
     "id": 73,
     "imagen": "images/ronda-73.jpg",
     "respuesta": "ia",
-    "explicacion": "Las arrugas del entrecejo son exageradas como una caricatura fotorrealista y los cubiertos al costado del plato tienen puntas desparejas.",
+    "explicacion": "Las púas del erizo son demasiado uniformes y simétricas, y las uñitas de las patas delanteras se mezclan con la corteza de la rama.",
     "credito": "Generada con IA"
   },
   {
@@ -521,8 +521,8 @@
     "id": 75,
     "imagen": "images/ronda-75.jpg",
     "respuesta": "ia",
-    "explicacion": "Mirá la mano que sostiene la lapicera y las páginas del libro: las letras son garabatos sin sentido y la luz tiene ese tono cálido plástico típico de DALL·E 3.",
-    "credito": "Generada con IA (DALL·E 3)"
+    "explicacion": "Probá leer la marca de la máquina de coser y el cartel colgado atrás: son letras inventadas sin sentido, y la tijera sobre la mesa tiene los aros deformados.",
+    "credito": "Generada con IA (Flux.1)"
   },
   {
     "id": 76,
@@ -549,7 +549,7 @@
     "id": 79,
     "imagen": "images/ronda-79.jpg",
     "respuesta": "ia",
-    "explicacion": "Fijate en los objetos del consultorio en el fondo: parecen instrumentos médicos de lejos, pero al acercarte no son ningún objeto reconocible.",
+    "explicacion": "Fijate en las etiquetas blancas de las muestras de pelo: parecen códigos y palabras, pero todos los caracteres son garabatos ilegibles típicos de la IA.",
     "credito": "Generada con IA"
   },
   {
@@ -563,8 +563,8 @@
     "id": 81,
     "imagen": "images/ronda-81.jpg",
     "respuesta": "ia",
-    "explicacion": "Mirá las caras y las copas de la gente en segundo plano: los rostros se deforman y los dedos que sostienen los vasos tienen falanges de más.",
-    "credito": "Generada con IA (DALL·E 3)"
+    "explicacion": "La piel de la cara tiene una suavidad plástica sin poros reales y los dedos que tocan la frente se pliegan con articulaciones borrosas.",
+    "credito": "Generada con IA"
   },
   {
     "id": 82,
@@ -577,8 +577,8 @@
     "id": 83,
     "imagen": "images/ronda-83.jpg",
     "respuesta": "ia",
-    "explicacion": "Los botones de los trajes decimonónicos no están alineados, las manos tienen pliegues borrosos y la iluminación de estudio es idéntica en todas las figuras.",
-    "credito": "Generada con IA (Gemini)"
+    "explicacion": "Mirá el interior de la oreja derecha y los pliegues de los dedos en la nuca: el cartílago tiene una forma antinatural y la piel carece de textura real.",
+    "credito": "Generada con IA"
   },
   {
     "id": 84,
@@ -619,7 +619,7 @@
     "id": 89,
     "imagen": "images/ronda-89.jpg",
     "respuesta": "ia",
-    "explicacion": "El pelaje del gato parece pasado por un filtro de suavizado extremo y los bigotes nacen de lugares desparejos y se esfuman en el aire.",
+    "explicacion": "Fijate en las flores pintadas en el borde del plato y en los fideos: los dibujos florales son todos desparejos y varios penne tienen cortes imposibles.",
     "credito": "Generada con IA"
   },
   {
@@ -647,8 +647,8 @@
     "id": 93,
     "imagen": "images/ronda-93.jpg",
     "respuesta": "ia",
-    "explicacion": "La copa de vino tiene reflejos simétricos de estudio y el pelaje del gato tiene esa textura sedosa hiperperfecta típica de los generadores actuales.",
-    "credito": "Generada con IA (DALL·E 3)"
+    "explicacion": "Los hongos salteados tienen formas raras que no corresponden ni a sombrero ni a tallo, con un brillo aceitoso parejo y hojitas verdes fundidas en la superficie.",
+    "credito": "Generada con IA"
   },
   {
     "id": 94,
@@ -661,8 +661,8 @@
     "id": 95,
     "imagen": "images/ronda-95.jpg",
     "respuesta": "ia",
-    "explicacion": "El tejido del polera negra se funde con el pelaje del perro sin un borde claro y la boina flota sobre las orejas sin aplastarlas.",
-    "credito": "Generada con IA (DALL·E 2)"
+    "explicacion": "Las trenzas de la masa de chocolate mantienen una simetría casi idéntica de punta a punta y las migas de arriba flotan sin textura real de horneado.",
+    "credito": "Generada con IA"
   },
   {
     "id": 96,
@@ -675,8 +675,8 @@
     "id": 97,
     "imagen": "images/ronda-97.jpg",
     "respuesta": "ia",
-    "explicacion": "Fijate en los pies y las manos apoyadas sobre la roca: los dedos se mezclan con la piedra y el agua barrosa tiene ondas que no siguen la corriente.",
-    "credito": "Generada con IA (Stable Diffusion)"
+    "explicacion": "Mirá las aspas de los molinos y las franjas de tulipanes: las rejillas de madera se tuercen y las flores forman una alfombra lisa sin tallos individuales.",
+    "credito": "Generada con IA (Midjourney)"
   },
   {
     "id": 98,
@@ -689,7 +689,7 @@
     "id": 99,
     "imagen": "images/ronda-99.jpg",
     "respuesta": "ia",
-    "explicacion": "Las flores alrededor del oso tienen pétalos que se fusionan con el pelaje y la luz parece salir desde adentro de las plantas.",
+    "explicacion": "Fijate en los reflejos de la mesa de vidrio y las lámparas naranjas de la derecha: las patas metálicas no conectan bien y la roca se mete adentro del techo.",
     "credito": "Generada con IA (Midjourney)"
   },
   {
