@@ -3,7 +3,7 @@
     "id": 1,
     "imagen": "images/ronda-01.jpg",
     "respuesta": "ia",
-    "explicacion": "Mirá las manos que sostienen el mate: la mano derecha tiene seis dedos y algunas falanges se deforman al agarrar la calabaza.",
+    "explicacion": "Esta no tiene errores a simple vista: manos, mate y fondo se ven creíbles. Fue generada con Gemini, y por eso es un buen ejemplo de que las pistas visuales ya no alcanzan: conviene preguntarse de dónde viene la imagen.",
     "credito": "Generada con IA (Gemini)"
   },
   {
@@ -11,7 +11,7 @@
     "imagen": "images/ronda-02.jpg",
     "respuesta": "real",
     "explicacion": "Fijate en los carteles de la vidriera: cada palabra en inglés y cada número del horario se leen perfecto. La IA suele deformar las letras chicas.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 3,
@@ -25,7 +25,7 @@
     "imagen": "images/ronda-04.jpg",
     "respuesta": "real",
     "explicacion": "Mirá el pelaje del perro y los pastos desenfocados adelante: hay pelos sueltos, bigotes irregulares y tierra real en el suelo. La IA suele alisar todo.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 5,
@@ -53,7 +53,7 @@
     "imagen": "images/ronda-08.jpg",
     "respuesta": "real",
     "explicacion": "Los gestos son espontáneos, las manos entrelazadas tienen anatomía normal y la trama del poncho mantiene su dibujo en los pliegues sin derretirse.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 9,
@@ -67,7 +67,7 @@
     "imagen": "images/ronda-10.jpg",
     "respuesta": "real",
     "explicacion": "En las zonas oscuras se nota el grano real del sensor de la cámara y la textura de las rocas volcánicas con nieve nunca repite el mismo patrón.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 11,
@@ -81,7 +81,7 @@
     "imagen": "images/ronda-12.jpg",
     "respuesta": "real",
     "explicacion": "Mirá el pelaje del perro y el suelo: hay polvo real, pelos desordenados y una profundidad de campo óptica natural de lente fotográfico.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 13,
@@ -95,7 +95,7 @@
     "imagen": "images/ronda-14.jpg",
     "respuesta": "real",
     "explicacion": "El brillo húmedo de la nariz tiene textura real de piel canina y cada bigote sale de su folículo sin cortarse ni doblarse raro.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 15,
@@ -109,7 +109,7 @@
     "imagen": "images/ronda-16.jpg",
     "respuesta": "real",
     "explicacion": "Fijate en las sombras duras del sol y las imperfecciones del entorno: la luz cae con la misma dirección e intensidad en toda la escena.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 17,
@@ -123,7 +123,7 @@
     "imagen": "images/ronda-18.jpg",
     "respuesta": "real",
     "explicacion": "Las cuerdas y el tejido de la hamaca mantienen su tensión real bajo el peso del perro, algo que la IA suele deformar.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 19,
@@ -137,7 +137,7 @@
     "imagen": "images/ronda-20.jpg",
     "respuesta": "real",
     "explicacion": "Las ondas del agua del lago y las gotas sobre el pelaje mojado responden a la física real, sin patrones repetidos.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 21,
@@ -151,7 +151,7 @@
     "imagen": "images/ronda-22.jpg",
     "respuesta": "real",
     "explicacion": "Las huellas y los cristales de nieve muestran variaciones irregulares reales, con grano natural de cámara en los blancos.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 23,
@@ -165,7 +165,7 @@
     "imagen": "images/ronda-24.jpg",
     "respuesta": "real",
     "explicacion": "En el contraluz del atardecer se ven pelos sueltos iluminados uno por uno y las briznas de pasto mantienen su forma de punta a punta.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 25,
@@ -179,7 +179,7 @@
     "imagen": "images/ronda-26.jpg",
     "respuesta": "real",
     "explicacion": "Los mechones apelmazados por la lluvia y el barro real del campo tienen un desorden orgánico que los generadores tienden a embellecer.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 27,
@@ -193,7 +193,7 @@
     "imagen": "images/ronda-28.jpg",
     "respuesta": "real",
     "explicacion": "Los reflejos en el agua, la postura de equilibrio sobre la tabla y las proporciones del cuerpo humano y del perro son totalmente coherentes.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 29,
@@ -207,7 +207,7 @@
     "imagen": "images/ronda-30.jpg",
     "respuesta": "real",
     "explicacion": "La mirada, las manchas asimétricas naturales del hocico y el desenfoque progresivo del fondo son propios de una cámara réflex real.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 31,
@@ -221,7 +221,7 @@
     "imagen": "images/ronda-32.jpg",
     "respuesta": "real",
     "explicacion": "Mirá la madera gastada de la cerca: tiene vetas, astillas y clavos oxidados reales que siguen una línea recta perfecta.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 33,
@@ -235,7 +235,7 @@
     "imagen": "images/ronda-34.jpg",
     "respuesta": "real",
     "explicacion": "Fijate en la mano que acaricia al perro bostezando: las cinco falanges, las uñas y los dientes del animal tienen anatomía exacta.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 35,
@@ -249,7 +249,7 @@
     "imagen": "images/ronda-36.jpg",
     "respuesta": "real",
     "explicacion": "La interacción entre el nene y el perro, los pliegues de la ropa infantil y la luz natural exterior son espontáneos y coherentes.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 37,
@@ -263,7 +263,7 @@
     "imagen": "images/ronda-38.jpg",
     "respuesta": "real",
     "explicacion": "La correa mantiene una línea continua desde la mano hasta el collar sin cortarse ni desaparecer, un detalle donde la IA suele fallar.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 39,
@@ -277,7 +277,7 @@
     "imagen": "images/ronda-40.jpg",
     "respuesta": "real",
     "explicacion": "En el puesto callejero hay envases, utensilios gastados, manchas de aceite reales y carteles al fondo con caracteres bien trazados.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 41,
@@ -291,7 +291,7 @@
     "imagen": "images/ronda-42.jpg",
     "respuesta": "real",
     "explicacion": "Las líneas de fuga de los edificios, los cables, las señales viales y el asfalto gastado respetan una perspectiva geométrica exacta.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 43,
@@ -305,7 +305,7 @@
     "imagen": "images/ronda-44.jpg",
     "respuesta": "real",
     "explicacion": "Las luces de la calle tienen la aberración cromática y el grano en sombra propios de una foto nocturna real en Bogotá.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 45,
@@ -319,7 +319,7 @@
     "imagen": "images/ronda-46.jpg",
     "respuesta": "real",
     "explicacion": "Fijate en los azulejos, las barandas y los carteles de la estación de subte: todas las juntas y letras mantienen su alineación real.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 47,
@@ -333,7 +333,7 @@
     "imagen": "images/ronda-48.jpg",
     "respuesta": "real",
     "explicacion": "Las manchas de humedad, el óxido y el desgaste urbano tienen texturas crudas y variadas que no salen de un patrón sintético.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 49,
@@ -347,7 +347,7 @@
     "imagen": "images/ronda-50.jpg",
     "respuesta": "real",
     "explicacion": "Mirá las paredes de ladrillo y las filas de ventanas: cada hilada es recta y continua, sin ladrillos derretidos ni ventanas desfasadas.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 51,
@@ -361,7 +361,7 @@
     "imagen": "images/ronda-52.jpg",
     "respuesta": "real",
     "explicacion": "Las estelas de luz de larga exposición siguen exactamente el carril de los vehículos y los edificios del fondo conservan bordes nítidos.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 53,
@@ -375,7 +375,7 @@
     "imagen": "images/ronda-54.jpg",
     "respuesta": "real",
     "explicacion": "En un mercado lleno de mercadería real cada bolsa, cartel y persona del fondo conserva su forma concreta sin mezclarse con lo de al lado.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 55,
@@ -389,7 +389,7 @@
     "imagen": "images/ronda-56.jpg",
     "respuesta": "real",
     "explicacion": "El traje del portero, los botones alineados y el reflejo arquitectónico en los vidrios de la entrada coinciden con la calle real.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 57,
@@ -403,7 +403,7 @@
     "imagen": "images/ronda-58.jpg",
     "respuesta": "real",
     "explicacion": "Las vigas metálicas, tensores y remaches del puente tienen una estructura de ingeniería simétrica y continua de punta a punta.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 59,
@@ -417,7 +417,7 @@
     "imagen": "images/ronda-60.jpg",
     "respuesta": "real",
     "explicacion": "Las siluetas urbanas, las señales de tránsito y los reflejos sobre el pavimento muestran una iluminación natural sin retoques sintéticos.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 61,
@@ -431,7 +431,7 @@
     "imagen": "images/ronda-62.jpg",
     "respuesta": "real",
     "explicacion": "La postura natural de la persona, los pliegues de su ropa y la geometría de la vereda y los cordones son completamente reales.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 63,
@@ -445,7 +445,7 @@
     "imagen": "images/ronda-64.jpg",
     "respuesta": "real",
     "explicacion": "En el callejón de Génova las persianas, balcones y cables tendidos entre fachadas tienen continuidad física real.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 65,
@@ -459,7 +459,7 @@
     "imagen": "images/ronda-66.jpg",
     "respuesta": "real",
     "explicacion": "Las costuras de la ropa, la textura de la tela y los autos y carteles desenfocados atrás en Nueva York son consistentes al 100%.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 67,
@@ -473,7 +473,7 @@
     "imagen": "images/ronda-68.jpg",
     "respuesta": "real",
     "explicacion": "Fijate en las piernas y los pasos de la gente cruzando la senda peatonal: nadie tiene extremidades duplicadas ni sombras contradictorias.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 69,
@@ -487,7 +487,7 @@
     "imagen": "images/ronda-70.jpg",
     "respuesta": "real",
     "explicacion": "Los adoquines del piso y los marcos de las ventanas antiguas muestran un desgaste histórico real y una perspectiva limpia.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 71,
@@ -501,7 +501,7 @@
     "imagen": "images/ronda-72.jpg",
     "respuesta": "real",
     "explicacion": "Los autos estacionados en la pendiente tienen patentes, espejos y ruedas bien proporcionadas que siguen el ángulo de la calle.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 73,
@@ -515,7 +515,7 @@
     "imagen": "images/ronda-74.jpg",
     "respuesta": "real",
     "explicacion": "El metal quemado del wok, el movimiento real del salteado y las gotas de salsa salpicadas tienen el desorden propio de una cocina real.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 75,
@@ -529,7 +529,7 @@
     "imagen": "images/ronda-76.jpg",
     "respuesta": "real",
     "explicacion": "Los carteles de los taxis, las ópticas de los autos y la señalética urbana tienen tipografías y formas industriales exactas.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 77,
@@ -543,7 +543,7 @@
     "imagen": "images/ronda-78.jpg",
     "respuesta": "real",
     "explicacion": "Las columnas clásicas, las cornisas y el reloj del edificio público mantienen proporciones arquitectónicas reales sin deformaciones.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 79,
@@ -557,7 +557,7 @@
     "imagen": "images/ronda-80.jpg",
     "respuesta": "real",
     "explicacion": "En la cafetería las tazas apiladas, la máquina de espresso y los carteles del menú tienen bordes y textos nítidos.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 81,
@@ -571,7 +571,7 @@
     "imagen": "images/ronda-82.jpg",
     "respuesta": "real",
     "explicacion": "El borde cerámico de la taza azul es un círculo perfecto, el asa está bien unida y las burbujas de la espuma del café son irregulares.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 83,
@@ -585,7 +585,7 @@
     "imagen": "images/ronda-84.jpg",
     "respuesta": "real",
     "explicacion": "Mirá las manos conversando alrededor de las tazas: las articulaciones, uñas y anillos son anatómicamente reales.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 85,
@@ -599,7 +599,7 @@
     "imagen": "images/ronda-86.jpg",
     "respuesta": "real",
     "explicacion": "El dibujo de la espuma (latte art) se deforma de manera natural contra la pared de la taza y la madera de la mesa tiene vetas continuas.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 87,
@@ -613,7 +613,7 @@
     "imagen": "images/ronda-88.jpg",
     "respuesta": "real",
     "explicacion": "Los reflejos de la ventana sobre la mesa y la vajilla coinciden exactamente con la luz exterior del local.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 89,
@@ -627,7 +627,7 @@
     "imagen": "images/ronda-90.jpg",
     "respuesta": "real",
     "explicacion": "Los poros del hormigón tienen suciedad y marcas reales, sin ese alisado plástico que suele dejar la IA en las superficies.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 91,
@@ -641,7 +641,7 @@
     "imagen": "images/ronda-92.jpg",
     "respuesta": "real",
     "explicacion": "Los granos de azúcar sueltos, la cuchara metálica y la textura de la crema tienen reflejos y tamaños reales.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 93,
@@ -655,7 +655,7 @@
     "imagen": "images/ronda-94.jpg",
     "respuesta": "real",
     "explicacion": "La simetría entre el plato y la taza es geométricamente consistente vista en escorzo, algo que suele ovalarse raro con IA.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 95,
@@ -669,7 +669,7 @@
     "imagen": "images/ronda-96.jpg",
     "respuesta": "real",
     "explicacion": "Las microburbujas de la leche espumada tienen tamaños variados y el esmalte de la taza verde muestra pequeños brillos reales.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 97,
@@ -683,7 +683,7 @@
     "imagen": "images/ronda-98.jpg",
     "respuesta": "real",
     "explicacion": "El cuaderno abierto tiene renglones y bordes de hojas reales que no se fusionan entre sí, junto a una lapicera bien definida.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   },
   {
     "id": 99,
@@ -697,6 +697,6 @@
     "imagen": "images/ronda-100.jpg",
     "respuesta": "real",
     "explicacion": "La luz lateral suave produce una sombra degradada coherente y se aprecia el grano fino natural de la fotografía.",
-    "credito": "Foto real sin copyright (Unsplash · CC0)"
+    "credito": "Foto real"
   }
 ]
